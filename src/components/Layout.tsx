@@ -5,8 +5,9 @@ import FlavorNav from "./FlavorNav";
 const Layout = ({ children }: PropsWithChildren) => {
   return (
     <div>
-      <PartyNav />
       <FlavorNav />
+      <PartyNav />
+
       {children}
     </div>
   );

@@ -18,5 +18,6 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #aaa5a2
+  background: #aaa5a2;
+  font-family: 'IM Fell English', serif;
 }

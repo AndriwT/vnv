@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
-import { ChangeEvent, useState } from "react";
-import { Interface } from "readline";
+import { ChangeEvent, KeyboardEvent, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,30 +17,48 @@ export default function Home() {
   };
 
   const addLog = () => {
-    setLogs([...logs, log]);
-    setLog("");
+    if (log) {
+      setLogs([...logs, log]);
+      setLog("");
+    } else {
+      alert("Nothing to log.");
+    }
+  };
+
+  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      addLog();
+    }
   };
 
   return (
-    <main className="flex flex-col items-center justify-between pr-56">
+    <main className="flex flex-col">
       <input
-        className="text-white text-3xl bg-[#aaa5a2] focus:outline-none"
+        className="text-white text-3xl pt-2 pl-20 bg-[#aaa5a2] focus:outline-none"
         type="text"
         value={title}
         onChange={handleTitleChange}
       />
-      {logs?.map((log, index) => (
-        <div>
-          <p>{log}</p>
+      <div className="w-3/4 pl-4">
+        {logs?.map((log, index) => (
+          <div className="m-2 pl-4 flex flex-wrap rounded-xl">
+            <p>{log}</p>
+          </div>
+        ))}
+        <div className="fixed bottom-60 w-full">
+          <input
+            className="bg-stone-300 p-2 rounded-l-md focus:outline-none w-2/3"
+            onChange={handleLogChange}
+            value={log}
+            onKeyDown={handleKeyDown}
+          />
+          <button
+            className="bg-stone-500 rounded-r-md p-2 w-20"
+            onClick={addLog}
+          >
+            Add Log
+          </button>
         </div>
-      ))}
-      <div>
-        <input
-          className="bg-stone-300 focus:outline-none"
-          onChange={handleLogChange}
-          value={log}
-        />
-        <button onClick={addLog}>Add Log</button>
       </div>
     </main>
   );
