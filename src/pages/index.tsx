@@ -45,15 +45,15 @@ export default function Home() {
             <p>{log}</p>
           </div>
         ))}
-        <div className="fixed bottom-60 w-full">
+        <div className="fixed bottom-60 w-9/12">
           <input
-            className="bg-stone-300 p-2 rounded-l-md focus:outline-none w-2/3"
+            className="bg-stone-300 p-2 rounded-l-md focus:outline-none w-4/5"
             onChange={handleLogChange}
             value={log}
             onKeyDown={handleKeyDown}
           />
           <button
-            className="bg-stone-500 rounded-r-md p-2 w-20"
+            className="bg-stone-500 rounded-r-md p-2 w-1/6 hover:bg-stone-400 focus:bg-stone-600"
             onClick={addLog}
           >
             Add Log
