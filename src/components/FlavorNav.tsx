@@ -1,4 +1,3 @@
-import Button from "./Button";
 import { FunctionComponent, PropsWithChildren } from "react";
 
 const FlavorNav: React.FC = () => {
@@ -7,13 +6,27 @@ const FlavorNav: React.FC = () => {
       <div className="bg-stone-400 h-5/6 w-6/12 rounded-3xl">
         <h1 className="text-center pt-2">Flavor Nav Menu</h1>
         <div className="ml-2">
-          <Button label="Random NPC" />
-          <Button label="Random Enemy" />
-          <Button label="Random Place" />
-          <Button label="Random Event" />
-          <Button label="Random Weather" />
-          <Button label="Random Animal" />
-          <Button label="Random Loot" />
+          <button className="bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600">
+            Random NPC
+          </button>
+          <button className="bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600">
+            Random Enemy
+          </button>
+          <button className="bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600">
+            Random Place
+          </button>
+          <button className="bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600">
+            Random Event
+          </button>
+          <button className="bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600">
+            Random Weather
+          </button>
+          <button className="bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600">
+            Random Animal
+          </button>
+          <button className="bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600">
+            Random Loot
+          </button>
         </div>
       </div>
       <div className="bg-stone-400 h-5/6 w-1/5 ml-6 rounded-3xl">
