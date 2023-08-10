@@ -9,7 +9,12 @@ const FlavorNav: React.FC = () => {
           <button className="bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600">
             Random NPC
           </button>
-          <button className="bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600">
+          <button
+            className="bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600"
+            onClick={() => {
+              window.location.href = "/enemy";
+            }}
+          >
             Random Enemy
           </button>
           <button className="bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600">

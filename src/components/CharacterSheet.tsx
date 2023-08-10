@@ -5,7 +5,7 @@ interface componentProps {
 const CharacterSheet = () => {
   return (
     <div>
-      <h1>Hey gurl, you clicked a character button C;</h1>
+      <h1>Character profile sheet. Under construction.</h1>
     </div>
   );
 };
