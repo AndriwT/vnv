@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <main className="flex flex-col">
       <input
-        className="text-white text-3xl pt-2 pl-20 bg-[#aaa5a2] focus:outline-none"
+        className="text-magnolia text-3xl pt-2 pl-20 bg-walnut focus:outline-none"
         type="text"
         value={title}
         onChange={handleTitleChange}
@@ -47,13 +47,13 @@ export default function Home() {
         ))}
         <div className="fixed bottom-60 w-9/12">
           <input
-            className="bg-stone-300 p-2 rounded-l-md focus:outline-none w-4/5"
+            className="bg-walnut p-2 rounded-l-md focus:outline-none w-4/5 shadow-lg"
             onChange={handleLogChange}
             value={log}
             onKeyDown={handleKeyDown}
           />
           <button
-            className="bg-stone-500 rounded-r-md p-2 w-1/6 hover:bg-stone-400 focus:bg-stone-600"
+            className="bg-vandyke rounded-r-md rounded-tl-3xl p-2 w-1/6 hover:bg-battleship focus:bg-stone-800"
             onClick={addLog}
           >
             Add Log

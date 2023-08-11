@@ -1,7 +1,7 @@
 import { ChangeEvent, KeyboardEvent, useState } from "react";
 import CharacterSheet from "./CharacterSheet";
 
-("bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600");
+("bg-walnut p-2 rounded-xl shadow-md m-2 hover:bg-battleship focus:bg-stone-600");
 
 const PartyNav = () => {
   const [note, setNote] = useState("");
@@ -28,8 +28,8 @@ const PartyNav = () => {
   };
 
   return (
-    <div className="bg-stone-500 flex flex-col items-center justify-center w-1/4 h-full absolute right-0">
-      <div className="bg-stone-400 h-3/5 w-11/12 rounded-3xl">
+    <div className="bg-vandyke flex flex-col items-center justify-center w-1/4 h-full absolute right-0">
+      <div className="bg-battleship h-3/5 w-11/12 rounded-3xl">
         <h1 className="text-center pt-2">Party Nav Menu</h1>
 
         {character ? (
@@ -40,19 +40,19 @@ const PartyNav = () => {
         ) : (
           <div className="flex flex-col">
             <button
-              className="bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600"
+              className="bg-walnut p-2 rounded-xl shadow-md m-2 hover:bg-battleship focus:bg-stone-600"
               onClick={handleSelection}
             >
               Sally The WedgyMaster
             </button>
             <button
-              className="bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600"
+              className="bg-walnut p-2 rounded-xl shadow-md m-2 hover:bg-battleship focus:bg-stone-600"
               onClick={handleSelection}
             >
               Tirion Valirion Sihirion The Third
             </button>
             <button
-              className="bg-stone-500 p-2 rounded-xl shadow-md m-2 hover:bg-stone-400 focus:bg-stone-600"
+              className="bg-walnut p-2 rounded-xl shadow-md m-2 hover:bg-battleship focus:bg-stone-600"
               onClick={handleSelection}
             >
               Herman... "That's it, he's just Herman"
@@ -60,7 +60,7 @@ const PartyNav = () => {
           </div>
         )}
       </div>
-      <div className="bg-stone-400 h-2/6 w-11/12 mt-4 rounded-3xl">
+      <div className="bg-battleship h-2/6 w-11/12 mt-4 rounded-3xl">
         <h1 className="text-center pt-2">Notes</h1>
         <div className="ml-4 ">
           {notes?.map(
@@ -90,7 +90,7 @@ const PartyNav = () => {
             onKeyDown={handleKeyDown}
           />
           <button
-            className="bg-stone-500 rounded-r-md w-1/4 p-2 hover:bg-stone-400 focus:bg-stone-600"
+            className="bg-walnut rounded-r-md w-1/4 p-2 hover:bg-battleship focus:bg-stone-600"
             onClick={addNote}
           >
             Add Note
