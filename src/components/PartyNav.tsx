@@ -3,6 +3,10 @@ import CharacterSheet from "./CharacterSheet";
 
 ("bg-walnut p-2 rounded-xl shadow-md m-2 hover:bg-battleship focus:bg-stone-600");
 
+const characterObj = {
+  name: "Herman... \"That's it, he's just Herman\"",
+};
+
 const PartyNav = () => {
   const [note, setNote] = useState("");
   const [notes, setNotes] = useState([""]);
@@ -28,14 +32,14 @@ const PartyNav = () => {
   };
 
   return (
-    <div className="bg-vandyke flex flex-col items-center justify-center w-1/4 h-full absolute right-0">
+    <div className="bg-vandyke flex flex-col items-center justify-center w-2/6 h-full absolute right-0">
       <div className="bg-battleship h-3/5 w-11/12 rounded-3xl">
         <h1 className="text-center pt-2">Party Nav Menu</h1>
 
         {character ? (
           <div>
             <button onClick={handleSelection}>Back</button>
-            <CharacterSheet />
+            <CharacterSheet character={characterObj} />
           </div>
         ) : (
           <div className="flex flex-col">

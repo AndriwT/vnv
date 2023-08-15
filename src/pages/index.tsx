@@ -47,7 +47,7 @@ export default function Home() {
         ))}
         <div className="fixed bottom-60 w-9/12">
           <input
-            className="bg-walnut p-2 rounded-l-md focus:outline-none w-4/5 shadow-lg"
+            className="bg-walnut p-2 rounded-l-md focus:outline-none w-4/6 shadow-lg"
             onChange={handleLogChange}
             value={log}
             onKeyDown={handleKeyDown}

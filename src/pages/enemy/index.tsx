@@ -43,7 +43,7 @@ const Enemy = () => {
       <div className="bg-battleship h-60 w-[73%] m-4 rounded-2xl">
         <h2 className="pl-4 pt-2">Background:</h2>
         <textarea
-          className="text-white bg-battleship opacity-30 ml-4 focus:outline-none"
+          className="text-white bg-battleship ml-4 focus:outline-none"
           value={background}
           onChange={handleBackgroundChange}
           rows={8}
