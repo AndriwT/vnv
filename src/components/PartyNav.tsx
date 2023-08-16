@@ -5,12 +5,27 @@ import CharacterSheet from "./CharacterSheet";
 
 const characterObj = {
   name: "Herman... \"That's it, he's just Herman\"",
+  abilities: {
+    strength: 5,
+    dexterity: 3,
+    constitution: 6,
+    intelligence: 2,
+    wisdom: 4,
+    charisma: 3,
+  },
+  class: "Barbarian",
+  level: "II",
+  race: "Elf",
+  background: "Artisan",
+  alignment: "Lawful Good",
+  playerName: "Andriw Tapanes",
+  xp: 132,
 };
 
 const PartyNav = () => {
   const [note, setNote] = useState("");
   const [notes, setNotes] = useState([""]);
-  const [character, setCharacter] = useState<boolean>(false);
+  const [character, setCharacter] = useState<boolean>(true);
 
   const handleNoteChange = (e: ChangeEvent<HTMLInputElement>) => {
     setNote(e.target.value);
@@ -34,11 +49,18 @@ const PartyNav = () => {
   return (
     <div className="bg-vandyke flex flex-col items-center justify-center w-2/6 h-full absolute right-0">
       <div className="bg-battleship h-3/5 w-11/12 rounded-3xl">
-        <h1 className="text-center pt-2">Party Nav Menu</h1>
+        <div className="flex items-center ">
+          <button
+            className="bg-vandyke w-10 h-10 m-2 rounded-md shadow-md"
+            onClick={handleSelection}
+          >
+            🔙
+          </button>
+          <h1 className="text-center">Party Nav Menu</h1>
+        </div>
 
         {character ? (
           <div>
-            <button onClick={handleSelection}>Back</button>
             <CharacterSheet character={characterObj} />
           </div>
         ) : (
